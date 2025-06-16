@@ -1,0 +1,14 @@
+import "./App.css";
+import Router_Father from "./Router/router";
+import PaginatedItems from './Components/Paginn'
+
+function App() {
+  return (
+    <>
+    <PaginatedItems/>
+      {/* <Router_Father /> */}
+    </>
+  );
+}
+
+export default App;

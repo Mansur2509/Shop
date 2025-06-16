@@ -1,0 +1,43 @@
+.pagination {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: brown;
+    padding: 30px;
+    color: bisque;
+}
+
+.Ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+}
+
+.link {
+    background-color: aquamarine;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Ul img {
+
+    height: 100px;
+
+}
+.Ul p{
+    grid-area: 2/3/2/3;
+}
+.nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.397);
+}

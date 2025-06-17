@@ -52,11 +52,11 @@ function PaginatedItems() {
   const pageCount = Math.ceil(filteredProducts.length / step);
 
   return (
-    <div>
-      <section>
+    <div className="container main">
+      <section className='select'>
         <label>Категория:</label>
-        <select value={selected} onChange={(e) => setSelected(e.target.value)}>
-          <option value="any">Все категории</option>
+        <select value={selected} onChange={(e) => setSelected(e.target.value)} className='categories'>
+          <option value="any" ><span>Все категории</span></option>
           {categories.map((category, index) => (
             <option key={index} value={category}>
               {category}
@@ -70,7 +70,7 @@ function PaginatedItems() {
         {currentItems.length > 0 ? (
           currentItems.map((item) => (
             <Link key={item.id} className="link" to={`/detail/${item.id}`}>
-              {item.title}
+              <p>{item.title}</p>
               <img src={item.thumbnail} alt={item.title} width={100} />
             </Link>
           ))

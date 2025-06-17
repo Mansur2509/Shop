@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
+import toggle from '../../public/home_icon.svg'
 import '../assets/styles/Main.css'
-import icon from '../../public/vite.svg'
+
+import { useTheme } from '../Provider/Theme.jsx'
 const NavBar = () => {
-    return (<nav className="nav container">
-        <Link to='/'><img src={icon} alt="" /></Link>
-        <p>ИНТЕРНЕТ МАГАЗИН ШЕСТЕРОЧКА</p>
+    const { toggleTheme } = useTheme();
+
+    return (<nav className="nav ">
+        <div className='container navContent'>
+
+            <Link to='/' className="Navlink">
+           <img src={toggle} alt="" /></Link>
+            <h3>ИНТЕРНЕТ МАГАЗИН ШЕСТЕРОЧКА</h3>
+            <button onClick={toggleTheme}>Change Theme</button>
+        </div>
     </nav>)
 }
 export default NavBar

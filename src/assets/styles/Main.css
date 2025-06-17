@@ -3,9 +3,9 @@
     gap: 10px;
     justify-content: center;
     margin-top: 10px;
-    background-color: brown;
+    background-color: #004CFF;
     padding: 30px;
-    color: bisque;
+    color: var(--base);
 }
 
 .Ul {
@@ -14,14 +14,33 @@
     grid-template-rows: repeat(3, 1fr);
     grid-row-gap: 50px;
     grid-column-gap: 50px;
+    margin: 15px;
 }
 
 .link {
-    background-color: aquamarine;
+    box-shadow: 0 5px 10px 0 var(--contr_base);
+    background: var(--bge);
     height: 200px;
+    border-radius: 9px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.link p {
+    color: var(--contr_base);
+}
+
+.link:hover {
+    background: rgb(255, 238, 0);
+    color: var(--base);
+    transition: 1.0s;
+    box-shadow: 18px 18px 36px 0 rgba(216, 209, 209, 0);
+}
+
+.link:hover>p {
+    color: var(--base);
 }
 
 .Ul img {
@@ -29,15 +48,68 @@
     height: 100px;
 
 }
-.Ul p{
-    grid-area: 2/3/2/3;
+select{
+    background-color: var(--bge);
 }
-.nav{
-    width: 100vw;
+
+.categories{
+    background-color: var(--bge) !important;
+    border-color: #004CFF !important;
+}
+.navContent {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 50px;
-    
-    align-items: center;
-    background-color: rgba(255, 0, 0, 0.397);
+    padding: 0 100px;
 }
+
+.Ul p {
+    grid-area: 2/3/2/3;
+}
+
+h3 {
+    color: var(--base);
+}
+
+.nav {
+    width: 100vw;
+    display: flex;
+    height: 50px;
+
+    align-items: center;
+    box-shadow: 0 10px 30px 0 rgba(254, 114, 76, 0.2);
+    background: #004cff;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.categories {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 324px;
+    height: 65px;
+    box-shadow: 15px 20px 45px 0 rgba(233, 233, 233, 0.25);
+    background: #fff;
+}
+
+label {
+    font-weight: 400;
+    font-size: 17px;
+    color: #c4c4c4;
+}
+
+.option {
+    font-weight: 400;
+    font-size: 17px;
+    color: #8b6262;
+}
+
+.main {}

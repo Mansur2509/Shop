@@ -1,11 +1,13 @@
 :root {
   --base: #ffffff;
   --contr_base: #000000;
+  --bge: #ffffff;
   --accent_text: #27272A;
 }
 
 [data-theme='dark'] {
   --base: #000;
+  --bge:  #013dca;
   --contr_base: #fff;
   --accent_text: #fff;
 }
@@ -18,14 +20,14 @@ button{
 
 * {
   font-family: 'OpenSans';
+  transition: .5s;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 #root{
 
-  padding-top: 0 !important ;
-
+background-color: var(--base);
 }
 ul {
   list-style: none;
@@ -37,7 +39,7 @@ a {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 0 15px;
 }

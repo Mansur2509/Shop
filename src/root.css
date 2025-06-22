@@ -26,7 +26,7 @@ button{
   box-sizing: border-box;
 }
 #root{
-
+height: 100vh;
 background-color: var(--base);
 }
 ul {

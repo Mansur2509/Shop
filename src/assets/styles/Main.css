@@ -38,6 +38,12 @@
     transition: 1.0s;
     box-shadow: 18px 18px 36px 0 rgba(216, 209, 209, 0);
 }
+.selections{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
 
 .link:hover>p {
     color: var(--base);
@@ -113,3 +119,7 @@ label {
 }
 
 .main {}
+
+.Ul p{
+    color: var(--contr_base);
+}

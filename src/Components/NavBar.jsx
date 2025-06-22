@@ -10,7 +10,7 @@ const NavBar = () => {
         <div className='container navContent'>
 
             <Link to='/' className="Navlink">
-           <img src={toggle} alt="" /></Link>
+           <img src={toggle} alt="Упс..." /></Link>
             <h3>ИНТЕРНЕТ МАГАЗИН ШЕСТЕРОЧКА</h3>
             <button onClick={toggleTheme}>Change Theme</button>
         </div>

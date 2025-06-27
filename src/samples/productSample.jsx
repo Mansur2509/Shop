@@ -27,17 +27,26 @@ function ProductSample() {
   const PageChange = ({ selected }) => setPage(selected);
 
   return (
-    <section className="Sample">
+    <section className="Sample container">
 
-      <div className="Decription"> <h1>{current.description}</h1></div>
+      <div className="Decription">
+        <h1>{current.description}</h1>
+        <button className="decriptionBtn">Купить</button>
+      </div>
       <div className="Img">
+
+        <h2 className="prodName"> {current.title}</h2>
         <div className="slider_base">
-          {current.images?.[page] && (
-            <img
-              src={current.images[page]}
-              className='img'
-            />
-          )}
+          <div className="PIC">
+
+            {current.images?.[page] && (
+              <img
+                src={current.images[page]}
+                className='img'
+                alt={`Упс... Тут было фото ${current.title}`}
+              />
+            )}
+          </div>
           <ReactPaginate
             previousLabel={<button className="Back">Back</button>}
             nextLabel={<button className="Next">Next</button>}
@@ -51,9 +60,23 @@ function ProductSample() {
           />
         </div>
       </div>
-      <div className="Price">{current.price}$</div>
-      <div className="Numb">{current.count}</div>
-      <div className="Name">{current.name}</div>
+      <div className="Info">
+        <h2>Info about product</h2>
+        <ul className="prodInfo">
+          <li>
+            Price:{current.price}$
+          </li>
+          <li>
+            Dicount:{current.discountPercentage}%
+          </li>
+          <li>Category:{
+            current.category
+          }</li>
+          <li>Stock number:{current.stock}</li>
+        </ul>
+
+      </div>
+
     </section>
   );
 }

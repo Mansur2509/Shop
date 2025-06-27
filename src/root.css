@@ -11,7 +11,9 @@
   --contr_base: #fff;
   --accent_text: #fff;
 }
-
+#root{
+  height: fit-content ;
+}
 button{
   border-width: none;
   border: none;
@@ -26,7 +28,6 @@ button{
   box-sizing: border-box;
 }
 #root{
-height: 100vh;
 background-color: var(--base);
 }
 ul {

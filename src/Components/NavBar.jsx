@@ -12,7 +12,7 @@ const NavBar = () => {
             <Link to='/' className="Navlink">
            <img src={toggle} alt="Упс..." /></Link>
             <h3>ИНТЕРНЕТ МАГАЗИН ШЕСТЕРОЧКА</h3>
-            <button onClick={toggleTheme}>Change Theme</button>
+            <button onClick={toggleTheme} className="navbtn">Change Theme</button>
         </div>
     </nav>)
 }

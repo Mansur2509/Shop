@@ -23,7 +23,6 @@ function PaginatedItems() {
   const dispatch = useDispatch();
   const { product, status, error } = useSelector((state) => state.product);
 
-  // Диапазоны цен
   const priceRanges = [
     { label: "0.99-25.99", min: 0.99, max: 25.99 },
     { label: "25.99-50.99", min: 25.99, max: 50.99 },
@@ -53,16 +52,16 @@ function PaginatedItems() {
   useEffect(() => {
     let filtered = product;
     if (selectedCategory != "any") {
-      filtered = filtered.filter((item) => item.category === selectedCategory);
+      filtered = filtered.filter((item) => item.category == selectedCategory);
     }
     if (selectedName != "any") {
-      filtered = filtered.filter((item) => item.title === selectedName);
+      filtered = filtered.filter((item) => item.title == selectedName);
     }
     if (selectedPriceRange != "any") {
-      const range = priceRanges.find(r => r.label === selectedPriceRange);
+      const range = priceRanges.find(r => r.label == selectedPriceRange);
       if (range) {
         filtered = filtered.filter((item) => 
-          item.price >= range.min && (range.max === Infinity ? true : item.price <= range.max)
+          item.price >= range.min && (range.max == Infinity ? true : item.price <= range.max)
         );
       }
     }
@@ -165,13 +164,13 @@ function PaginatedItems() {
             value={stockInput}
             onChange={(e) => setStockInput(e.target.value)}
             placeholder="Введите минимальное количество"
-            className='stock-input'
+            className='categories stock'
             min="0"
             step="1"
           />
         </section>
 
-        <button onClick={resetFilters}>Сброс фильтров</button>
+        <button className='categories' onClick={resetFilters}>Сброс фильтров</button>
       </header>
 
       <ul className="Ul">
